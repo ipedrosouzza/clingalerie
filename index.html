@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clingalerie - Seu consultório, quando e onde precisar</title>
+    <meta name="description" content="Aluguel de consultórios odontológicos completos com infraestrutura profissional e equipamentos de última geração.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="clingalerie-logo.png" alt="Clingalerie Logo" class="logo-img">
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="nav-desktop">
+                    <button onclick="scrollToSection('home')" class="nav-link">Home</button>
+                    <button onclick="scrollToSection('sobre')" class="nav-link">Sobre Nós</button>
+                    <button onclick="scrollToSection('estrutura')" class="nav-link">Estrutura</button>
+                    <button onclick="scrollToSection('servicos')" class="nav-link">Serviços</button>
+                    <button onclick="scrollToSection('planos')" class="nav-link">Planos</button>
+                    <button onclick="scrollToSection('faq')" class="nav-link">FAQ</button>
+                    <button onclick="scrollToSection('contato')" class="nav-link">Contato</button>
+                </nav>
+
+                <!-- Mobile menu button -->
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <i data-lucide="menu" class="menu-icon"></i>
+                    <i data-lucide="x" class="close-icon hidden"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="nav-mobile hidden">
+            <div class="nav-mobile-content">
+                <button onclick="scrollToSection('home')" class="nav-mobile-link">Home</button>
+                <button onclick="scrollToSection('sobre')" class="nav-mobile-link">Sobre Nós</button>
+                <button onclick="scrollToSection('estrutura')" class="nav-mobile-link">Estrutura</button>
+                <button onclick="scrollToSection('servicos')" class="nav-mobile-link">Serviços</button>
+                <button onclick="scrollToSection('planos')" class="nav-mobile-link">Planos</button>
+                <button onclick="scrollToSection('faq')" class="nav-mobile-link">FAQ</button>
+                <button onclick="scrollToSection('contato')" class="nav-mobile-link">Contato</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Clingalerie</h1>
+                    <p class="hero-subtitle">"Seu consultório, quando e onde precisar"</p>
+                    <p class="hero-description">
+                        Aluguel de consultórios odontológicos completos com infraestrutura profissional, equipamentos de última
+                        geração e localização privilegiada. Tudo pronto para você focar no que mais importa: o cuidado com seus
+                        pacientes.
+                    </p>
+                    <button class="btn btn-primary" onclick="scrollToSection('contato')">
+                        Agendar Visita
+                    </button>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=600&fit=crop&crop=center" 
+                         alt="Consultório odontológico moderno da Clingalerie" class="hero-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Nós Section -->
+    <section id="sobre" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Sobre Nós</h2>
+                <p class="section-subtitle">
+                    Transformando a forma como profissionais da odontologia acessam espaços de trabalho de qualidade
+                </p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <h3 class="about-heading">Nossa História</h3>
+                    <p class="about-description">
+                        A Clingalerie nasceu da necessidade de oferecer aos profissionais da odontologia uma alternativa
+                        flexível e completa para exercer sua profissão. Entendemos que nem todos os dentistas precisam ou podem
+                        manter um consultório próprio, mas todos merecem trabalhar em um ambiente profissional e bem equipado.
+                    </p>
+
+                    <div class="values-grid">
+                        <div class="value-item">
+                            <h4 class="value-title">Nossa Missão</h4>
+                            <p class="value-text">
+                                Democratizar o acesso a consultórios odontológicos de alta qualidade, oferecendo flexibilidade e
+                                infraestrutura completa para profissionais que buscam excelência no atendimento.
+                            </p>
+                        </div>
+
+                        <div class="value-item">
+                            <h4 class="value-title">Nossa Visão</h4>
+                            <p class="value-text">
+                                Ser referência nacional em locação de consultórios odontológicos, reconhecida pela qualidade dos
+                                espaços e pelo suporte oferecido aos profissionais.
+                            </p>
+                        </div>
+
+                        <div class="value-item">
+                            <h4 class="value-title">Nossos Valores</h4>
+                            <ul class="value-list">
+                                <li class="value-list-item">
+                                    <i data-lucide="check-circle" class="check-icon"></i>
+                                    Qualidade e segurança em primeiro lugar
+                                </li>
+                                <li class="value-list-item">
+                                    <i data-lucide="check-circle" class="check-icon"></i>
+                                    Flexibilidade para atender diferentes necessidades
+                                </li>
+                                <li class="value-list-item">
+                                    <i data-lucide="check-circle" class="check-icon"></i>
+                                    Transparência em todos os processos
+                                </li>
+                                <li class="value-list-item">
+                                    <i data-lucide="check-circle" class="check-icon"></i>
+                                    Suporte contínuo aos nossos parceiros
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-images">
+                    <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=500&h=300&fit=crop&crop=center" 
+                         alt="Equipe profissional da Clingalerie" class="about-img">
+                    <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=500&h=300&fit=crop&crop=center" 
+                         alt="Recepção moderna da Clingalerie" class="about-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Estrutura Section -->
+    <section id="estrutura" class="section section-gray">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nossa Estrutura</h2>
+                <p class="section-subtitle">
+                    Infraestrutura completa e moderna para garantir o melhor atendimento aos seus pacientes
+                </p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i data-lucide="users" class="feature-icon"></i>
+                    <h3 class="feature-title">4 Consultórios Completos</h3>
+                    <p class="feature-description">
+                        Consultórios odontológicos totalmente equipados com equipamentos de última geração
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <i data-lucide="shield" class="feature-icon"></i>
+                    <h3 class="feature-title">Sala de Esterilização</h3>
+                    <p class="feature-description">
+                        Central de esterilização equipada com autoclave para máxima segurança
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <i data-lucide="wifi" class="feature-icon"></i>
+                    <h3 class="feature-title">Recepção Climatizada</h3>
+                    <p class="feature-description">
+                        Área de recepção confortável com TV e climatização para o conforto dos pacientes
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <i data-lucide="coffee" class="feature-icon"></i>
+                    <h3 class="feature-title">Copa Equipada</h3>
+                    <p class="feature-description">
+                        Copa completa com geladeira, micro-ondas e cafeteira para sua comodidade
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <i data-lucide="heart" class="feature-icon"></i>
+                    <h3 class="feature-title">Banheiros Adaptados</h3>
+                    <p class="feature-description">
+                        Banheiros acessíveis para PCD, garantindo inclusão e conforto para todos
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <i data-lucide="car" class="feature-icon"></i>
+                    <h3 class="feature-title">Estacionamento</h3>
+                    <p class="feature-description">
+                        Estacionamento conveniado para facilitar o acesso de profissionais e pacientes
+                    </p>
+                </div>
+            </div>
+
+            <!-- Gallery -->
+            <div class="gallery">
+                <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400&h=300&fit=crop&crop=center" 
+                     alt="Consultório odontológico 1" class="gallery-img">
+                <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=400&h=300&fit=crop&crop=center" 
+                     alt="Sala de esterilização" class="gallery-img">
+                <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=400&h=300&fit=crop&crop=center" 
+                     alt="Área de espera" class="gallery-img">
+                <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=400&h=300&fit=crop&crop=center" 
+                     alt="Recepção" class="gallery-img">
+                <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=400&h=300&fit=crop&crop=center" 
+                     alt="Copa" class="gallery-img">
+                <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400&h=300&fit=crop&crop=center" 
+                     alt="Banheiro acessível" class="gallery-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços Section -->
+    <section id="servicos" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nossos Serviços</h2>
+                <p class="section-subtitle">
+                    Tudo que você precisa para focar no que realmente importa: o cuidado com seus pacientes
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-item">
+                    <i data-lucide="check-circle" class="service-icon"></i>
+                    <p class="service-text">Limpeza diária dos consultórios e áreas comuns</p>
+                </div>
+                <div class="service-item">
+                    <i data-lucide="check-circle" class="service-icon"></i>
+                    <p class="service-text">Recepcionista para receber e direcionar pacientes</p>
+                </div>
+                <div class="service-item">
+                    <i data-lucide="check-circle" class="service-icon"></i>
+                    <p class="service-text">Luz, água e internet de alta velocidade</p>
+                </div>
+                <div class="service-item">
+                    <i data-lucide="check-circle" class="service-icon"></i>
+                    <p class="service-text">TV em áreas comuns</p>
+                </div>
+                <div class="service-item">
+                    <i data-lucide="check-circle" class="service-icon"></i>
+                    <p class="service-text">Atendimento via WhatsApp e telefone fixo</p>
+                </div>
+                <div class="service-item">
+                    <i data-lucide="check-circle" class="service-icon"></i>
+                    <p class="service-text">Central de esterilização equipada</p>
+                </div>
+                <div class="service-item">
+                    <i data-lucide="check-circle" class="service-icon"></i>
+                    <p class="service-text">Cilindro de oxigênio disponível</p>
+                </div>
+                <div class="service-item">
+                    <i data-lucide="check-circle" class="service-icon"></i>
+                    <p class="service-text">Medicamentos do kit de emergência</p>
+                </div>
+                <div class="service-item">
+                    <i data-lucide="check-circle" class="service-icon"></i>
+                    <p class="service-text">Banheiro acessível para PCD</p>
+                </div>
+                <div class="service-item">
+                    <i data-lucide="check-circle" class="service-icon"></i>
+                    <p class="service-text">Licenças e autorizações do prédio</p>
+                </div>
+                <div class="service-item">
+                    <i data-lucide="check-circle" class="service-icon"></i>
+                    <p class="service-text">Copa compartilhada completa</p>
+                </div>
+                <div class="service-item">
+                    <i data-lucide="check-circle" class="service-icon"></i>
+                    <p class="service-text">Café cortesia para clientes</p>
+                </div>
+                <div class="service-item">
+                    <i data-lucide="check-circle" class="service-icon"></i>
+                    <p class="service-text">Localização privilegiada</p>
+                </div>
+                <div class="service-item">
+                    <i data-lucide="check-circle" class="service-icon"></i>
+                    <p class="service-text">Equipamentos odontológicos exclusivos</p>
+                </div>
+                <div class="service-item">
+                    <i data-lucide="check-circle" class="service-icon"></i>
+                    <p class="service-text">Instrumentais para locação sob demanda</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planos Section -->
+    <section id="planos" class="section section-gray">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Planos de Locação</h2>
+                <p class="section-subtitle">
+                    Flexibilidade total para atender suas necessidades profissionais
+                </p>
+            </div>
+
+            <div class="plans-grid">
+                <div class="plan-card">
+                    <i data-lucide="clock" class="plan-icon"></i>
+                    <h3 class="plan-title">Por Hora</h3>
+                    <p class="plan-subtitle">Ideal para consultas pontuais</p>
+                    <div class="plan-price">Sob consulta</div>
+                    <ul class="plan-features">
+                        <li>• Mínimo 2 horas</li>
+                        <li>• Equipamentos inclusos</li>
+                        <li>• Suporte técnico</li>
+                        <li>• Limpeza incluída</li>
+                    </ul>
+                </div>
+
+                <div class="plan-card">
+                    <i data-lucide="users" class="plan-icon"></i>
+                    <h3 class="plan-title">Por Turno</h3>
+                    <p class="plan-subtitle">Manhã ou tarde completa</p>
+                    <div class="plan-price">Sob consulta</div>
+                    <ul class="plan-features">
+                        <li>• 4 horas consecutivas</li>
+                        <li>• Recepcionista incluída</li>
+                        <li>• Todos os equipamentos</li>
+                        <li>• Café cortesia</li>
+                    </ul>
+                </div>
+
+                <div class="plan-card plan-popular">
+                    <div class="plan-badge">Mais Popular</div>
+                    <i data-lucide="star" class="plan-icon"></i>
+                    <h3 class="plan-title">Diária</h3>
+                    <p class="plan-subtitle">Dia completo de trabalho</p>
+                    <div class="plan-price">Sob consulta</div>
+                    <ul class="plan-features">
+                        <li>• 8 horas de uso</li>
+                        <li>• Suporte completo</li>
+                        <li>• Instrumentais inclusos</li>
+                        <li>• Desconto progressivo</li>
+                    </ul>
+                </div>
+
+                <div class="plan-card">
+                    <i data-lucide="shield" class="plan-icon"></i>
+                    <h3 class="plan-title">Mensal</h3>
+                    <p class="plan-subtitle">Para uso regular</p>
+                    <div class="plan-price">Sob consulta</div>
+                    <ul class="plan-features">
+                        <li>• Uso ilimitado</li>
+                        <li>• Melhor custo-benefício</li>
+                        <li>• Prioridade na agenda</li>
+                        <li>• Suporte premium</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="plans-cta">
+                <button class="btn btn-primary" onclick="scrollToSection('contato')">
+                    Solicitar Orçamento
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Perguntas Frequentes</h2>
+                <p class="section-subtitle">Tire suas dúvidas sobre nossos serviços e funcionamento</p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Como funciona o sistema de reservas?</span>
+                        <i data-lucide="chevron-down" class="faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>O sistema de reservas é simples e flexível. Você pode agendar por telefone, WhatsApp ou através do nosso
+                        formulário de contato. Recomendamos agendar com antecedência para garantir a disponibilidade do horário
+                        desejado. Confirmamos a reserva em até 2 horas.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Quais equipamentos estão inclusos na locação?</span>
+                        <i data-lucide="chevron-down" class="faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Todos os consultórios incluem cadeira odontológica completa, equipo com alta e baixa rotação, sugador,
+                        refletor LED, compressor, autoclave para esterilização, e instrumentais básicos. Equipamentos especiais
+                        podem ser solicitados com antecedência.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>É necessário trazer meus próprios instrumentais?</span>
+                        <i data-lucide="chevron-down" class="faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Não é obrigatório. Oferecemos um kit básico de instrumentais esterilizados incluído na locação. Porém,
+                        muitos profissionais preferem usar seus próprios instrumentais por questão de preferência pessoal. Nossa
+                        central de esterilização está disponível para ambos os casos.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Posso cancelar ou remarcar minha reserva?</span>
+                        <i data-lucide="chevron-down" class="faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim, aceitamos cancelamentos e remarcações com até 24 horas de antecedência sem cobrança adicional.
+                        Cancelamentos com menos de 24 horas podem estar sujeitos a taxa de cancelamento. Remarcações são sempre
+                        bem-vindas, sujeitas à disponibilidade.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Vocês oferecem desconto para uso frequente?</span>
+                        <i data-lucide="chevron-down" class="faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim! Oferecemos descontos progressivos para profissionais que utilizam nossos serviços regularmente.
+                        Temos planos mensais com condições especiais e descontos para reservas em pacotes. Entre em contato para
+                        conhecer nossas condições especiais.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato Section -->
+    <section id="contato" class="section section-gray">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contato</h2>
+                <p class="section-subtitle">
+                    Entre em contato conosco para agendar sua visita
+                </p>
+            </div>
+
+            <!-- Simplified contact section with only essential info -->
+            <div class="contact-info contact-info-centered">
+                <div class="contact-card">
+                    <i data-lucide="phone" class="contact-icon"></i>
+                    <div class="contact-details">
+                        <h4 class="contact-title">Telefone</h4>
+                        <p class="contact-text">(11) 3456-7890</p>
+                        <p class="contact-text">(11) 99999-9999</p>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <i data-lucide="mail" class="contact-icon"></i>
+                    <div class="contact-details">
+                        <h4 class="contact-title">E-mail</h4>
+                        <p class="contact-text">contato@clingalerie.com.br</p>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <i data-lucide="map-pin" class="contact-icon"></i>
+                    <div class="contact-details">
+                        <h4 class="contact-title">Endereço</h4>
+                        <p class="contact-text">
+                            Rua das Clínicas, 123<br>
+                            Centro - São Paulo/SP<br>
+                            CEP: 01234-567
+                        </p>
+                    </div>
+                </div>
+
+                <div class="contact-buttons">
+                    <button class="btn btn-whatsapp" onclick="openWhatsApp()">
+                        WhatsApp
+                    </button>
+                    <button class="btn btn-outline" onclick="openMaps()">
+                        Ver no Google Maps
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Clingalerie</h3>
+                    <p class="footer-slogan">"Seu consultório, quando e onde precisar"</p>
+                    <p class="footer-description">
+                        Transformando a forma como profissionais da odontologia acessam espaços de trabalho de qualidade.
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-heading">Links Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><button onclick="scrollToSection('sobre')" class="footer-link">Sobre Nós</button></li>
+                        <li><button onclick="scrollToSection('servicos')" class="footer-link">Serviços</button></li>
+                        <li><button onclick="scrollToSection('planos')" class="footer-link">Planos</button></li>
+                        <li><button onclick="scrollToSection('contato')" class="footer-link">Contato</button></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-heading">Contato</h4>
+                    <div class="footer-contact">
+                        <p>(11) 3456-7890</p>
+                        <p>contato@clingalerie.com.br</p>
+                        <p>
+                            Rua das Clínicas, 123<br>
+                            Centro - São Paulo/SP
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Clingalerie. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
